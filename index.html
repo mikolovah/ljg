@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Love Letter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: #fdf8f4;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fffaf0;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .letter {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #4a2f2f;
+      white-space: pre-line;
+    }
+
+    .signature {
+      margin-top: 40px;
+      text-align: right;
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+
+    .petal {
+      position: fixed;
+      top: -10px;
+      background: pink;
+      width: 14px;
+      height: 14px;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(45deg);
+      opacity: 0.6;
+      animation: fall 8s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 30px 16px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="letter">
+      My Dearest Love,
+
+      Hi bebii happy 13th monthsary! I knew that every month Ill get to celebrate this kind of celebration because I know that
+
+      we will be together till forever and eternity. Not playing it as a boastful and bad approach but the feeling and trust we 
+
+      have already in just a year. Also I am confident that I will always be present on your side whether you need me or not. I 
+
+      will allways take care of you and guide you whenever youre lost in your thoughts and will cheer you up to get back on your 
+
+      feet. I will never get tired reciprocating and giving you what you deserve, in things, in love, in joy, and in everything. 
+
+      Im trying all my best to keep up in your pace, in which, being great and perfect. Im always sincere in my mistakes and in 
+
+      asking forgiveness. I dont force our fights, its just so happens that Im so much and mistaken. Im sorry again for all the 
+
+      inconvenience I caused you. There will be more and more monthsaries to come hunny. I wont stay stagnant, but to always be 
+
+      better. Change is always constant and that will make us even stronger together. Dont worry in everything baby, just do 
+
+      what youre doing, will support you and call out if youre in the wrong. I will keep pushing you forward until you get what 
+
+      deserve. I love you very very very much, till eternity hunny. Im so proud of you my little one. Happy Happy 13 months my 
+
+      Louiela. Staying in love like day 1 is the only thing that wont change I guarantee you pretty baby. I hope and pray that all
+
+      your problems within family and yourself will always be solved! God gave me you and I will always cherish it!
+
+      Your Best Man,
+    </div>
+    <div class="signature">— Mikoo </div>
+  </div>
+
+  <!-- Floating petals -->
+  <script>
+    const numberOfPetals = 30;
+    for (let i = 0; i < numberOfPetals; i++) {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDelay = Math.random() * 10 + 's';
+      petal.style.background = `hsl(${Math.random() * 20 + 340}, 70%, 85%)`;
+      document.body.appendChild(petal);
+    }
+  </script>
+</body>
+</html>
